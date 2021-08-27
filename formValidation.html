@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Form Validation</title>
+</head>
+<body>
+	<form>
+		<label for="uName">Username</label>
+		<input type="text" name="username" id="uName"required><br><br>
+
+		<label for="psd">Password</label>
+		<input type="password" name="Password"id="psd">
+
+		<input type="submit" name="submit" value="Submit" onclick="myfunction()">
+		<input type="reset" name="reset"value="Reset">
+
+	</form>
+	<script type="text/javascript">
+		
+		function myfunction() {
+			var username=document.getElementById("uName");
+		var psd=document.getElementById("psd");
+			if(username.value ==""|| psd.value ==""){
+				alert("Fill in the gap");
+				return false;
+			}
+			
+
+			else if(psd.value.length<10){
+				alert("Please input minimum 10 digit");
+				return false;
+			}
+			else{
+				alert("Successfull");
+				return true;
+			}
+		}
+
+	</script>
+</body>
+</html>
